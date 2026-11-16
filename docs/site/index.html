@@ -1,13 +1,76 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenHiggsfield — Open-source Story Studio</title><meta name="description" content="An open-source character-to-film studio. Choose your cast, write six scenes and generate with your own provider keys."><meta property="og:image" content="https://openhiggsfield.com/studio-screen.png"><link rel="stylesheet" href="style.css"></head>
-<body><header><a class="brand" href="/">OpenHiggsfield</a><a href="https://github.com/thehiggsfieldai/OpenHiggsfield">GitHub ↗</a></header>
-<main><section class="hero"><p class="eyebrow">OPEN SOURCE · SELF-HOSTABLE</p><h1>A character-to-film studio.<br><em>Yours to build on.</em></h1><p class="intro">Choose your cast, write your story, and generate a one-minute film with your own AI provider keys.</p><div class="actions"><a class="button" href="https://github.com/thehiggsfieldai/OpenHiggsfield">View on GitHub ↗</a><a class="button secondary" href="https://thehiggsfield.ai">Live preview ↗</a></div></section>
-<figure class="preview"><img src="studio-screen.png" alt="The story editor with a story prompt on the left and selectable character cards on the right" width="1232" height="900"><figcaption>The story editor · Choose a character and start writing.</figcaption></figure>
-<section class="features" aria-label="Studio features"><article><h2>Your cast</h2><p>50 characters, or upload your own.</p></article><article><h2>Your direction</h2><p>Shape six scenes and review the cost.</p></article><article><h2>Your film</h2><p>Preview each clip and export an MP4.</p></article></section>
-<section class="setup" id="setup"><div><h2>Run it yourself.</h2><p>Node.js, SQLite and FFmpeg.<br>Configure sign-in, then connect fal or Higgsfield.</p><a href="https://github.com/thehiggsfieldai/OpenHiggsfield#run-with-docker">Setup guide ↗</a></div><pre><code>git clone https://github.com/thehiggsfieldai/OpenHiggsfield.git
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenHiggsfield by Transformaiton.com</title>
+  <meta name="description" content="A self-hosted studio for one-minute character films. Small businesses connect their own fal, Higgsfield, and OpenRouter keys. Published by Transformaiton.com.">
+  <meta property="og:title" content="OpenHiggsfield by Transformaiton.com">
+  <meta property="og:description" content="Write a one-minute ad, social video, or product promo. Review the script and the estimate, then render with your own provider account.">
+  <meta property="og:image" content="studio-screen.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">OpenHiggsfield by Transformaiton.com</a>
+    <a href="https://github.com/Transformaiton/OpenHiggsfield">GitHub ↗</a>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">SELF-HOSTED · YOUR API KEYS</p>
+      <h1>OpenHiggsfield<br><em>by Transformaiton.com</em></h1>
+      <p class="intro">A studio for one-minute character films. Pick a cast, review six scenes and the estimate, then render with API keys from accounts you control.</p>
+      <div class="actions">
+        <a class="button" href="https://github.com/Transformaiton/OpenHiggsfield">View on GitHub ↗</a>
+        <a class="button secondary" href="https://github.com/Transformaiton/OpenHiggsfield/blob/main/docs/INSTALL.md">Install guide ↗</a>
+      </div>
+    </section>
+    <figure class="preview">
+      <img src="home-screen.png" alt="Studio home page with a cast of illustrated characters, a story prompt, and buttons for Pip, Zora, Bop, Fern, Tansy, and Selene" width="1440" height="1000">
+      <figcaption>Home · Captured from a local run of this repository on 16 November 2026. No provider was called.</figcaption>
+    </figure>
+    <figure class="preview">
+      <img src="studio-screen.png" alt="Create screen with a one-minute story about a fox delivering a letter to the moon, and the character Pip selected" width="1440" height="1000">
+      <figcaption>Create a story · Choose a character, save a draft, then review the script before any render.</figcaption>
+    </figure>
+    <section class="features" aria-label="Studio features">
+      <article>
+        <h2>Your cast</h2>
+        <p>50 included characters, or a PNG, JPG, or WebP you upload.</p>
+      </article>
+      <article>
+        <h2>Your script</h2>
+        <p>Six scenes, about one minute. Edit the words, then read the estimate.</p>
+      </article>
+      <article>
+        <h2>Your film</h2>
+        <p>A 720p MP4 when you approve a render on your fal or Higgsfield balance.</p>
+      </article>
+    </section>
+    <section class="setup" id="setup">
+      <div>
+        <h2>Run it yourself.</h2>
+        <p>Node.js 24 and FFmpeg, or Docker Compose. Sign-in email uses your Resend account. Rendering uses your fal or Higgsfield account.</p>
+        <a href="https://github.com/Transformaiton/OpenHiggsfield/blob/main/docs/INSTALL.md">Install and self-hosting ↗</a><br>
+        <a href="https://github.com/Transformaiton/OpenHiggsfield/blob/main/docs/USAGE.md">Using the studio ↗</a>
+      </div>
+      <pre><code>git clone https://github.com/Transformaiton/OpenHiggsfield.git
 cd OpenHiggsfield
-cp .env.example .env
-# Set your origin, auth secret and email settings.
-docker compose up --build -d</code></pre></section>
-<p class="product-note">Provider usage and hosting have costs. The hosted site is a preview; see the README for current limitations.</p></main>
-<footer><p>Independent project. Not affiliated with, sponsored by, or endorsed by Higgsfield.ai.</p><nav aria-label="Footer"><a href="https://github.com/thehiggsfieldai/OpenHiggsfield/issues">Issues</a><a href="https://thehiggsfield.ai/privacy">Privacy</a><a href="https://thehiggsfield.ai/terms">Terms</a></nav></footer></body></html>
+npm ci
+npm ci --prefix apps/story-studio
+npm run dev
+# Second terminal:
+npm --prefix apps/story-studio run dev</code></pre>
+    </section>
+    <p class="product-note">The software is MIT-licensed. fal, Higgsfield, OpenRouter, Resend, and your own server bill separately. Estimates in this release were checked on 25 September 2026 and the server refuses a render when that check is older than 30 days. The screenshots show the upstream interface name TheHiggsField. Transformaiton.com is an independent consultancy and is not affiliated with, sponsored by, or endorsed by Higgsfield.</p>
+  </main>
+  <footer>
+    <p>OpenHiggsfield by Transformaiton.com. Credits and the MIT license: <a href="https://github.com/thehiggsfieldai/OpenHiggsfield">thehiggsfieldai/OpenHiggsfield</a>. Modifications in this copy are documentation and this page. Questions: <a href="mailto:info@transformaiton.com">info@transformaiton.com</a> · <a href="https://transformaiton.com/">transformaiton.com</a></p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/Transformaiton/OpenHiggsfield/blob/main/README.md">Guide</a>
+      <a href="https://github.com/Transformaiton">GitHub</a>
+      <a href="mailto:info@transformaiton.com">Email</a>
+    </nav>
+  </footer>
+</body>
+</html>
